@@ -80,9 +80,7 @@ class AddCorpseTableViewController: UITableViewController, UIImagePickerControll
         
         let dic = ["name":nameTextField.text!,
                    "death_reason":reasonTextField.text!,
-                   "death_time":strDate+" "+strTime,
-                   "height":"180",
-                   "job":"作家"]
+                   "death_time":strDate+" "+strTime]
         let notiName = Notification.Name("addLover")
         NotificationCenter.default.post(name: notiName, object: nil, userInfo: dic)
 

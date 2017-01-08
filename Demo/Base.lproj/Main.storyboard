@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="1678" y="-1092"/>
         </scene>
-        <!--introduction-->
+        <!--Introduction-->
         <scene sceneID="1hW-mm-LBT">
             <objects>
                 <viewController id="DZp-ND-qwW" sceneMemberID="viewController">
@@ -40,13 +40,48 @@
                     <view key="view" contentMode="scaleToFill" id="iOg-Vj-0mE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IntroImg" translatesAutoresizingMaskIntoConstraints="NO" id="Ydr-Am-Ovb">
+                                <rect key="frame" x="67" y="90" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="「名字被寫在死亡筆記本上的人會死」" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DW8-NS-v25">
+                                <rect key="frame" x="16" y="230" width="358" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqB-00-fts">
+                                <rect key="frame" x="26" y="269" width="338" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">外表是A4大小、看似普通的筆記本，實際上是來自死神世界的物品，死亡筆記本的基本使用規則如下：
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yc-nC-Egy">
+                                <rect key="frame" x="33" y="337" width="315" height="252"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">1.名字被寫在死亡筆記本上的人會死。
+2.寫名字的時候，自己的腦中必須記得對象的長相，否則沒有效果。因此，不會殺害同名同姓的人。
+3.在寫上名字後可以寫上死因，對象便會死於該死因。
+沒有寫上死因者，一律在40秒後死於心臟麻痺。
+4寫上死因後，有400秒的時間可以寫上詳細的死亡過程。
+5.如果放棄死亡筆記本的所有權，則與筆記本相關的記憶都會消失</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="introduction" id="vPO-aj-xiz"/>
+                    <navigationItem key="navigationItem" title="Introduction" id="vPO-aj-xiz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ImZ-jo-wi6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2456" y="-1092"/>
+            <point key="canvasLocation" x="2455.1999999999998" y="-1092.5037481259371"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DOm-nj-zTA">
@@ -198,6 +233,7 @@
                     </view>
                     <connections>
                         <outlet property="name" destination="lNu-3P-jwe" id="Lls-iR-8g8"/>
+                        <outlet property="photo" destination="iHE-5o-FJ4" id="fPG-MX-3Rd"/>
                         <outlet property="reason" destination="efw-1K-UIa" id="SYL-LW-pNu"/>
                         <outlet property="time" destination="HYM-J2-u3L" id="rPN-oq-789"/>
                     </connections>
@@ -302,14 +338,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="nwj-pL-Z8L">
-                                                    <rect key="frame" x="0.0" y="60" width="375" height="118"/>
+                                                    <rect key="frame" x="0.0" y="60" width="374" height="118"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="505538303.449646">
                                                         <!--2017-01-08 03:18:23 +0000-->
                                                     </date>
                                                 </datePicker>
                                                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="20" translatesAutoresizingMaskIntoConstraints="NO" id="wYM-MO-5dd">
-                                                    <rect key="frame" x="0.0" y="186" width="375" height="99"/>
+                                                    <rect key="frame" x="0.0" y="186" width="374" height="99"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="505538575.02258599">
                                                         <!--2017-01-08 03:22:55 +0000-->
@@ -369,6 +405,7 @@
     </scenes>
     <resources>
         <image name="DeathListIcon" width="24" height="24"/>
+        <image name="IntroImg" width="238" height="109"/>
         <image name="mainPage" width="24" height="24"/>
     </resources>
     <color key="tintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>

@@ -16,6 +16,7 @@ class DeathDetailViewController: UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var reason: UILabel!
     @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var photo: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,13 @@ class DeathDetailViewController: UIViewController {
         
         self.navigationItem.title = loverInfoDic["name"]!
         
+        let fileManager = FileManager.default
+        let docUrls =
+            fileManager.urls(for: .documentDirectory, in: .userDomainMask)
+        let docUrl = docUrls.first
+        let url = docUrl?.appendingPathComponent("\(loverInfoDic["name"]!).png")
 
+        photo.image = UIImage(contentsOfFile: url!.path)
     }
 
     override func didReceiveMemoryWarning() {
