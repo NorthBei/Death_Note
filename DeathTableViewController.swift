@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoversTableViewController: UITableViewController {
+class DeathTableViewController: UITableViewController {
 
   
     var isAddLover = false
@@ -73,7 +73,7 @@ class LoversTableViewController: UITableViewController {
         
         
         let notiName = Notification.Name("addLover")
-        NotificationCenter.default.addObserver(self, selector: #selector(LoversTableViewController.addLoverNoti(noti:)), name: notiName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(DeathTableViewController.addLoverNoti(noti:)), name: notiName, object: nil)
 
     }
 
@@ -99,7 +99,7 @@ class LoversTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LoverCell", for: indexPath) as! LoverTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DeathCell", for: indexPath) as! DeathTableViewCell
         let dic = lovers[indexPath.row]
 
         let fileManager = FileManager.default
@@ -110,10 +110,11 @@ class LoversTableViewController: UITableViewController {
         
 
         
-        cell.photoView.image = UIImage(contentsOfFile: url!.path)
+        cell.photo.image = UIImage(contentsOfFile: url!.path)
         
-        cell.nameLabel.text = dic["name"]
-        cell.starImageView.image = UIImage(named: dic["name"]!)
+        cell.name.text = dic["name"]
+        cell.time.text = dic["death_time"]
+        //cell.starImageView.image = UIImage(named: dic["name"]!)
         
         
         
@@ -135,7 +136,7 @@ class LoversTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
-        let controller = UIAlertController(title: "確定要 delete 嗎", message: nil, preferredStyle: .alert)
+        let controller = UIAlertController(title: "確定刪除?", message: nil, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Yes", style: .default) { (action) in
             
@@ -187,7 +188,7 @@ class LoversTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         
         if segue.identifier == "Detail" {
-            let controller = segue.destination as! LoverDetailViewController
+            let controller = segue.destination as! DeathDetailViewController
             let indexPath = self.tableView.indexPathForSelectedRow
             controller.loverInfoDic = lovers[indexPath!.row]
         }

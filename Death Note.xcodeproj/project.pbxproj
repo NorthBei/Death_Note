@@ -13,9 +13,9 @@
 		A676D3A51DFF9573001CD4AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676D3A31DFF9573001CD4AD /* Main.storyboard */; };
 		A676D3A71DFF9573001CD4AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A676D3A61DFF9573001CD4AD /* Assets.xcassets */; };
 		A676D3AA1DFF9573001CD4AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676D3A81DFF9573001CD4AD /* LaunchScreen.storyboard */; };
-		A676D3B61DFFCBA8001CD4AD /* LoversTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676D3B51DFFCBA8001CD4AD /* LoversTableViewController.swift */; };
-		A676D3B81DFFE11A001CD4AD /* LoverDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676D3B71DFFE11A001CD4AD /* LoverDetailViewController.swift */; };
-		A6B059921E09076300AFFAB9 /* LoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B059911E09076300AFFAB9 /* LoverTableViewCell.swift */; };
+		A676D3B61DFFCBA8001CD4AD /* DeathTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676D3B51DFFCBA8001CD4AD /* DeathTableViewController.swift */; };
+		A676D3B81DFFE11A001CD4AD /* DeathDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676D3B71DFFE11A001CD4AD /* DeathDetailViewController.swift */; };
+		A6B059921E09076300AFFAB9 /* DeathTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B059911E09076300AFFAB9 /* DeathTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		A676D3A61DFF9573001CD4AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A676D3A91DFF9573001CD4AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A676D3AB1DFF9573001CD4AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A676D3B51DFFCBA8001CD4AD /* LoversTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoversTableViewController.swift; path = ../LoversTableViewController.swift; sourceTree = "<group>"; };
-		A676D3B71DFFE11A001CD4AD /* LoverDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoverDetailViewController.swift; sourceTree = "<group>"; };
-		A6B059911E09076300AFFAB9 /* LoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoverTableViewCell.swift; sourceTree = "<group>"; };
+		A676D3B51DFFCBA8001CD4AD /* DeathTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeathTableViewController.swift; path = ../DeathTableViewController.swift; sourceTree = "<group>"; };
+		A676D3B71DFFE11A001CD4AD /* DeathDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathDetailViewController.swift; sourceTree = "<group>"; };
+		A6B059911E09076300AFFAB9 /* DeathTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +66,9 @@
 				A676D3A11DFF9573001CD4AD /* ViewController.swift */,
 				A676D3A31DFF9573001CD4AD /* Main.storyboard */,
 				A66BA2711E091A220076FC9C /* AddCorpseTableViewController.swift */,
-				A6B059911E09076300AFFAB9 /* LoverTableViewCell.swift */,
-				A676D3B51DFFCBA8001CD4AD /* LoversTableViewController.swift */,
-				A676D3B71DFFE11A001CD4AD /* LoverDetailViewController.swift */,
+				A6B059911E09076300AFFAB9 /* DeathTableViewCell.swift */,
+				A676D3B51DFFCBA8001CD4AD /* DeathTableViewController.swift */,
+				A676D3B71DFFE11A001CD4AD /* DeathDetailViewController.swift */,
 				A676D3A61DFF9573001CD4AD /* Assets.xcassets */,
 				A676D3A81DFF9573001CD4AD /* LaunchScreen.storyboard */,
 				A676D3AB1DFF9573001CD4AD /* Info.plist */,
@@ -149,10 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6B059921E09076300AFFAB9 /* LoverTableViewCell.swift in Sources */,
-				A676D3B81DFFE11A001CD4AD /* LoverDetailViewController.swift in Sources */,
+				A6B059921E09076300AFFAB9 /* DeathTableViewCell.swift in Sources */,
+				A676D3B81DFFE11A001CD4AD /* DeathDetailViewController.swift in Sources */,
 				A66BA2721E091A220076FC9C /* AddCorpseTableViewController.swift in Sources */,
-				A676D3B61DFFCBA8001CD4AD /* LoversTableViewController.swift in Sources */,
+				A676D3B61DFFCBA8001CD4AD /* DeathTableViewController.swift in Sources */,
 				A676D3A21DFF9573001CD4AD /* ViewController.swift in Sources */,
 				A676D3A01DFF9573001CD4AD /* AppDelegate.swift in Sources */,
 			);

@@ -8,26 +8,23 @@
 
 import UIKit
 
-class LoverDetailViewController: UIViewController {
+class DeathDetailViewController: UIViewController {
 
     var loverInfoDic:[String:String]!
     
     
-    @IBOutlet weak var heightLabel: UILabel!
-    
-    @IBOutlet weak var weightLabel: UILabel!
-    
-    
-    @IBOutlet weak var jobLabel: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var reason: UILabel!
+    @IBOutlet weak var time: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        heightLabel.text = loverInfoDic["height"]!
-        weightLabel.text = loverInfoDic["death_time"]!
-        jobLabel.text = loverInfoDic["job"]!
+        name.text = loverInfoDic["name"]!
+        reason.text = loverInfoDic["death_reason"]!
+        time.text = loverInfoDic["death_time"]!
         
         self.navigationItem.title = loverInfoDic["name"]!
         
