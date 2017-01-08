@@ -53,6 +53,10 @@ class AddCorpseTableViewController: UITableViewController, UIImagePickerControll
         
         let formatter = DateFormatter()
         
+        
+        
+        // 設置可以選擇的最早日期時間
+        dataPicker.minimumDate = formatter.date(from: "2016-01-09")
         // 設置時間顯示的格式
         formatter.dateFormat = "yyyy-MM-dd"
         let strDate = formatter.string(from: dataPicker.date)
